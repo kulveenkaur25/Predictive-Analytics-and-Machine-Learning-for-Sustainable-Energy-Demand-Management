@@ -1,62 +1,56 @@
-# Predictive-Analytics-and-Machine-Learning-for-Sustainable-Energy-Demand-Management
-This project focuses on predictive analytics to help the energy company eSC in South Carolina anticipate and manage peak energy demand during hot summer months. By analyzing temperature and energy usage data, we developed a forecasting model and recommendations to mitigate electricity consumption spikes.
+# Modeling Energy Consumption to Predict Future Demand
 
---Project Overview
+This project aims to provide the energy company eSC, based in South Carolina, with predictive analytics to anticipate and manage peak energy demand during extreme heat. Through analysis of temperature and energy usage data, we developed a forecasting model and provided actionable recommendations to help mitigate consumption spikes during hot summer months.
 
-Global warming has led to rising temperatures, causing increased electricity consumption, especially in the summer. This project utilizes data science and machine learning techniques to forecast energy demand during extreme heat and suggests actionable steps for eSC to reduce consumption peaks.
+## Project Overview
 
---Objectives
+With rising global temperatures leading to increased electricity consumption, especially in summer, this project uses data science and machine learning techniques to predict energy demand and offer solutions for peak demand management.
 
-**Predict Energy Demand**: Build a predictive model to forecast hourly energy demand based on historical weather and energy usage data.
+## Objectives
 
-**Provide Recommendations**: Analyze consumption patterns and offer suggestions to reduce energy demand through technology and infrastructure changes.
+- **Predict Energy Demand**: Build a model to forecast hourly energy demand using historical weather and energy usage data.
+- **Provide Recommendations**: Analyze consumption patterns and propose measures to reduce peak energy demand.
 
---Technologies and Tools Used
+## Technologies and Tools
 
-**Languages**: R, Python
+- **Languages**: R, Python
+- **Libraries**: Shiny, ggplot2, caret
+- **Machine Learning Models**: Linear Regression, Support Vector Machines, Neural Networks
 
-**Libraries**: Shiny, ggplot2, caret
+## Data Sources
 
-**Machine Learning Models**: Linear Regression, Support Vector Machines, Neural Networks
+- **House Information**: Static data on houses, including location and construction details.
+- **Energy Consumption Data**: Monthly energy usage records for July.
+- **Weather Data**: Hourly weather data for counties, adjusted to Eastern Daylight Time (EDT).
 
---Data Sources
+## Key Steps
 
-**House Information**: Static data on houses, including location and construction details.
+1. **Data Collection and Preparation**:
+   - Developed a data pipeline to gather and merge house, energy, and weather data.
+   - Aggregated data by county and hour, focusing on July's consumption.
 
-**Energy Consumption Data**: Monthly energy usage records for July.
+2. **Data Analysis**:
+   - Identified a linear relationship between temperature and energy consumption.
+   - Examined day and weekly patterns, showing peak demand early in the month and highest usage on Mondays through Wednesdays.
 
-**Weather Data**: Hourly weather data for various counties, converted to Eastern Daylight Time (EDT).
+3. **Modeling**:
+   - Tested several models and selected linear regression with an adjusted R² of 0.8909 for its predictive accuracy.
+   - Explored SVM and neural network models, which did not perform as well.
 
---Key Steps
+4. **Prediction and Visualization**:
+   - Forecasted hourly energy demand for July under a 5°C temperature increase scenario.
+   - Developed an interactive Shiny app to visualize county-specific demand trends.
 
-**Data Collection and Preparation**:
+## Recommendations
 
-Created a pipeline to integrate house, energy, and weather data.
+- **Insulation Upgrades**: Advise eSC to encourage improved insulation standards to lower household energy consumption.
+- **Solar Panel Adoption**: Promote solar panels to help offset energy demand during peak hours.
 
-Aggregated consumption and weather data by county and hour.
+## Conclusion
 
-**Data Analysis**:
+This project equips eSC with a data-driven approach to manage energy demand during peak summer periods. By anticipating demand and encouraging energy efficiency, eSC can help ensure reliable service and support sustainable energy practices.
 
-Identified a strong linear relationship between temperature increases and energy consumption.
 
-Analyzed consumption patterns by day and week to detect peak demand trends.
 
-**Modeling**:
+---
 
-Developed multiple predictive models, selecting linear regression for its high accuracy (adjusted R² = 0.8909).
-
-Tested additional models, including SVM and neural networks, which had lower predictive performance.
-
-**Prediction and Visualization**:
-
-Predicted hourly energy demand for July under a simulated 5°C temperature rise.
-
-Built an interactive Shiny app to visualize demand trends across counties.
-
---Recommendations
-
-**Insulation Improvements**: Encourage enhanced insulation standards to reduce energy usage per household.
-**Renewable Energy**: Advocate for solar panel installation to offset peak energy demands.
-
---Conclusion
-This project provides eSC with a proactive approach to managing energy demand during hot weather conditions, contributing to sustainable energy management through data-driven insights and technology.
